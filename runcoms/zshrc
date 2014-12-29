@@ -11,3 +11,20 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Rbenv
+if which rbenv > /dev/null;
+then
+	eval "$(rbenv init -)"
+fi
+
+# Java
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+# Add path to android tools
+export PATH=/opt/android-sdk-macosx/tools:/opt/android-sdk-macosx/platform-tools:$PATH
+
+# iOS
+export DEVELOPER_DIR=`xcode-select -p`
+alias symbolicatecrash="/Applications/Xcode.app/Contents/SharedFrameworks/DTDeviceKitBase.framework/Versions/A/Resources/symbolicatecrash"
+
