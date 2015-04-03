@@ -12,6 +12,9 @@ fi
 
 # Customize to your needs...
 
+# Default editor
+export EDITOR="vim"
+
 # Rbenv
 if which rbenv > /dev/null;
 then
@@ -22,7 +25,8 @@ fi
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 # Add path to android tools
-export PATH=/opt/android-sdk-macosx/tools:/opt/android-sdk-macosx/platform-tools:$PATH
+export ANDROID_SDK=/Users/m1r4ge/Library/Android/sdk
+export PATH=$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$PATH
 
 # iOS
 export DEVELOPER_DIR=`xcode-select -p`
